@@ -2,6 +2,7 @@ function comparar() {
     const n1 = Number(document.getElementById('n1').value || 0);
     const n2 = Number(document.getElementById('n2').value || 0);
     const operator = document.getElementById("operador").value;
+    
     let result;
  
     if (operator == "igual") {
