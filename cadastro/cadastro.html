@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Pessoas</title>
+
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+        .form-cadastro {
+          display: flex;
+          flex-direction: column;
+        color: blue;
+        background-color: bisque;
+          gap: 20px;
+          align-items: center;
+        }
+  
+        table,
+        th,
+        td {
+          border-collapse: collapse;
+          border: 1px solid mediumaquamarine;
+          padding: 8px;
+        }
+      </style>
+
+  </head>
+  <body>
+    <h1>Cadastro Final</h1>
+    <hr />
+    <form class="form-cadastro">
+      <label for="cod"
+        >Código
+        <input
+          placeholder="0000"
+          type="text"
+          id="cod"
+          name="cod"
+        />
+      </label>
+
+      <label for="prod"
+        >Produto
+        <input
+          placeholder="produto"
+          type="text"
+          id="prod"
+          name="prod"
+        />
+      </label>
+
+      <label for="quant"
+        >Quantidade
+        <input
+          type="number"
+          id="quant"
+          name="quant"
+          placeholder="x"
+        />
+      </label>
+      <label for="price"
+        >Preço Unit.
+        <input type="number" id="price" name="price" placeholder="R$ 00.00" />
+      </label>
+      <button>
+      <input type="reset" value="Cadastrar" onclick="cadastrar()" /></button>
+    </form>
+
+    <hr />
+
+    <table>
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Produto</th>
+          <th>Quantidade</th>
+          <th>Preço Unitário</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody id="tableMain">
+      </tbody>
+    </table>
+    <script src="cadastro.js"></script>
+  </body>
+</html>
